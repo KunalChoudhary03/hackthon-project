@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Storu = () => {
   const data = [
     {
@@ -30,25 +28,34 @@ const Storu = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-6  bg-black ">
-      {data.map((item, i) => (
-        <div
-          key={i}
-          className="relative w-60 h-72 rounded-xl overflow-hidden group shadow-lg"
-        >
-          <img
-            src={item.image}
-            alt={item.name}
-            className="w-full h-full object-cover transition duration-300 group-hover:blur-sm"
-          />
+   <div className="flex flex-wrap justify-center gap-6 bg-black">
+  {data.map((item, i) => (
+    <div
+      key={i}
+      className="w-60 rounded-xl overflow-hidden shadow-lg bg-gray-900 text-white"
+    >
+      <div className="relative group">
+        <img
+          src={item.image}
+          alt={item.name}
+          className="w-full h-72 object-cover transition duration-300 group-hover:blur-sm"
+        />
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
-            <p className="text-lg font-bold">{item.name}</p>
-            <p className="text-sm mt-1 text-center w-3/4">{item.successStory}</p>
-          </div>
+        <div className="absolute inset-0 hidden md:flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition duration-300 bg-black/50">
+          <p className="text-lg font-bold">{item.name}</p>
+          <p className="text-sm mt-1 text-center w-3/4">{item.successStory}</p>
         </div>
-      ))}
+      </div>
+
+      <div className="p-3 text-center md:hidden">
+        <p className="text-lg font-bold">{item.name}</p>
+        <p className="text-sm mt-1">{item.successStory}</p>
+      </div>
     </div>
+  ))}
+</div>
+
+
   );
 };
 
