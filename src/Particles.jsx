@@ -232,6 +232,7 @@ const Particles = ({
 
   const goToLearn = () => navigate("/learn");
   const goToTeach = () => navigate("/teach");
+  const goToExplore =()=> navigate("explore");
   return (
     <div
       ref={containerRef}
