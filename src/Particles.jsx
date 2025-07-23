@@ -280,6 +280,12 @@ const Particles = ({
           >
             Start Teaching
           </button>
+          <button
+            onClick={goToExplore}
+             className="sm:hidden bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+           >
+               Explore
+           </button>
         </motion.div>
 
         <motion.p
